@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Введите первое число:");
+﻿Console.WriteLine("Введите число:");
 string first = Console.ReadLine() ?? "";
 int n = Convert.ToInt32(first);
 if ((n % 2) == 0) {
