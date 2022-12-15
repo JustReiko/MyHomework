@@ -15,9 +15,9 @@
 
 // 1. Задать массив;
 // 2. Заполнить массив случайными числами;
-int [] InitArray ()
+double [] InitArray ()
 {
-    int[] array = new int [10];
+    double[] array = new double [10];
     Random rnd = new Random();
 
     for (int i = 0; i < 10; i++)
@@ -28,7 +28,7 @@ int [] InitArray ()
 }
 
 // 3. Вывести массив на консоль;
-void PrintArray(int[] array)
+void PrintArray(double[] array)
 {
     for(int i = 0; i < array.Length; i++)
     {
@@ -40,9 +40,9 @@ void PrintArray(int[] array)
 // 4. Найти максимальный элемент массива;
 // 4. Найти минимальный элемент массива;
 
-int MaxFinder (int [] array)
+double MaxFinder (double[] array)
 {
-    int max = 0;
+    double max = 0;
    
     for (int i = 0; i < array.Length; i++)
     {
@@ -54,9 +54,9 @@ int MaxFinder (int [] array)
     return max;
 }
 
-int MinFinder (int [] array)
+double MinFinder (double [] array)
 {
-    int min = array[0];
+    double min = array[0];
    
     for (int i = 0; i < array.Length; i++)
     {
@@ -68,17 +68,17 @@ int MinFinder (int [] array)
     return min;
 }
 
-int Dif (int [] array)
+double Dif (double [] array)
 {
-    int dif = MaxFinder(array) - MinFinder(array);
+    double dif = MaxFinder(array) - MinFinder(array);
     return dif;
 }
 
-int[] array = InitArray();
+double[] array = InitArray();
 PrintArray(array);
-int max = MaxFinder(array);
+double max = MaxFinder(array);
 Console.WriteLine($"Максимальное число в массиве:{max}");
-int min = MinFinder(array);
+double min = MinFinder(array);
 Console.WriteLine($"Минимальное число в массиве:{min}");
-int dif = Dif(array);
+double dif = Dif(array);
 Console.WriteLine($"Разница максимального и минимального числа в массиве:{dif}");
